@@ -5,6 +5,11 @@ h1 {
 	font-size: 30px;
 }
 
+#container{
+	border-color: black;
+	text-align: center;
+}
+
 #wordspot {
 	font-size: 50px;
 }
@@ -23,4 +28,24 @@ h1 {
 
 #timesLost {
 	font-size: 30px;
+}
+
+#c{
+	color: 	#FF0000;
+}
+
+#o{
+	color: #FF8000;
+}
+
+#l{
+	color: #FFFF00;
+}
+
+#o2{
+	color: #04B431;
+}
+
+#r{
+	color: #0000FF;
 }

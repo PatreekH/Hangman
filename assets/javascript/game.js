@@ -66,15 +66,15 @@ $("#timesLost").html(userLose)
 function wrongWord(obj) {
 	$("#guessLeft").html(gl)
 	$("#timesLost").html(userLose)
-	if (game.fullWord.indexOf(userGuess) < 0){
-		gl--;
-	}
+		if (game.fullWord.indexOf(userGuess) < 0){
+			gl--;
+		}
 
-	if (gl <= 0) {
+		if (gl <= 0) {
 			userLose++
 			reset();
+		}	
 	}
-}
 
 wrongWord();
 
@@ -95,15 +95,17 @@ function reset(obj){
 //Doesn't work (yet)
 function win(obj) {
 	$("#timesWon").html(game.wins)
-	if (game.dashes.firstChild == game.fullWord) {
-		userWins++
+	for (var i = 0; i < game.fullWord.length; i++){
+		if (game.dashes.firstChild(0) == game.fullWord.charAt[i]) {
+			userWins++
+			reset();
+		}
+
 	}
+
 }
 
 win();
 
-//how to set firstchild to every variable in an array
-//when you get the win to ++, set a new function to reset when that goes up
-//function if randomword is ___ set this image to color and this image to color, else (use rps as refernce)
 
 //Copyright Patrick Hernandez
