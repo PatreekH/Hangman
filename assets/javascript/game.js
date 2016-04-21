@@ -46,7 +46,7 @@ $(space).append(displaySpaces);
 $("#guessLeft").html(gl)
 $("#timesLost").html(userLose)
 
-//After getting one or more guesses correct, for some reason you will have 1 "free" guess to get an answer wrong before it actually takes away on the counter. This seems to only happen after guessing correctly, followed by a letter that is incorrect. ie: if you choose a correct letter, guessesLeft counter stays the same, but then choose a wrong letter and nothing will happen until you choose another wrong letter, only after the second incorrect guess will the game begin subtracting in guessesLeft. The same thing happens when going from wrong to right as well, the first guess that is correct after being wrong will subract from the counter when it is supposed to stay the same. If you watch the counter in browser and variate from incorrect to corret guesses you will see what I'm talking about. I tried for hours to get it to work and couldn't figure out where I went wrong.
+//After getting one or more guesses correct, for some reason you will have 1 "free" guess to get an answer wrong before it actually takes away on the counter. This seems to only happen after guessing correctly, followed by a letter that is incorrect. ie: if you choose a correct letter, guessesLeft counter stays the same, but then choose a wrong letter and nothing will happen until you choose another wrong letter, only after the second incorrect guess will the game begin subtracting in guessesLeft. The same thing happens when going from wrong to right as well, the first guess that is correct after being wrong will subract from the counter when it is supposed to stay the same. If you watch the counter in browser and variate between incorrect to corret guesses you will see what I'm talking about. I tried for hours to get it to work and couldn't figure out where I went wrong.
          
  document.onkeyup = function(event) {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -60,6 +60,8 @@ $("#timesLost").html(userLose)
         	$(displaySpaces).html(game.dashes);
     	} 
 	}
+
+
 
 function wrongWord(obj) {
 	$("#guessLeft").html(gl)
@@ -78,7 +80,7 @@ wrongWord();
 
 }
 
-//Kinda Works
+//Doesn't display new word until letter in new word is selected, everything else resets fine.
 function reset(obj){
 	game.fullWord = "";
 	game.dashes = [];
