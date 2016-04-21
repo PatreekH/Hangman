@@ -1,0 +1,26 @@
+
+
+
+h1 {
+	font-size: 30px;
+}
+
+#wordspot {
+	font-size: 50px;
+}
+
+#lettersguessed {
+	font-size: 50px;
+}
+
+#guessLeft {
+	font-size: 30px;
+}
+
+#timesWon {
+	font-size: 30px;
+}
+
+#timesLost {
+	font-size: 30px;
+}
