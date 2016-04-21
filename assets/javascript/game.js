@@ -1,12 +1,12 @@
 //Hangman Game by Patrick Hernandez
 
 //"If it looks stupid but it works, it ain't stupid."
-//									-Murphy's laws of military combat
+//									-Murphy's law
 
 //I had trouble 'console.log'ing when my entire game was formatted to be inside my object and therefore it was hard for me to see if my code was actually working or not. Because of this I just decided to format it outside of the object. Any suggestions for how to check if my code is working while its inside the object?
 
 var game = {
-	answerKey: ['red', 'blue', 'green', 'purple', 'yellow', 'orange'],
+	answerKey: ['red', 'blue', 'green', 'purple', 'yellow', 'orange', 'pink', 'aqua', 'cyan', 'violet', 'pink', 'white', 'black', 'lavender', 'maroon','turquoise', 'indigo'],
 	fullWord: "",
 	dashes: [],
 	guessedLetters: [],
@@ -37,7 +37,8 @@ function emptyWord(obj) {
 //runs functions
 randWord();
 emptyWord();
-
+var wordLength = game.fullWord.length
+var rightGuess = 0;
 //displays dashes and spaces
 $(displaySpaces).html(game.dashes);
 $(space).append(displaySpaces);
@@ -78,6 +79,21 @@ function wrongWord(obj) {
 
 wrongWord();
 
+//doesn't work yet
+function win(obj) {
+	$("#timesWon").html(game.wins)
+	for (var i = 0; i < game.fullWord.length; i++){
+		if (game.dashes == game.fullWord.charAt[i]) {
+			userWins++
+			reset();
+		}
+
+	}
+
+}
+
+win();
+
 }
 
 //Doesn't display new word until letter in new word is selected, everything else resets fine.
@@ -92,20 +108,6 @@ function reset(obj){
 	$(displaySpaces).html(game.dashes);
 }
 
-//Doesn't work (yet)
-function win(obj) {
-	$("#timesWon").html(game.wins)
-	for (var i = 0; i < game.fullWord.length; i++){
-		if (game.dashes.firstChild(0) == game.fullWord.charAt[i]) {
-			userWins++
-			reset();
-		}
-
-	}
-
-}
-
-win();
 
 
 //Copyright Patrick Hernandez
