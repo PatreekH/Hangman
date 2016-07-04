@@ -1,1 +1,3 @@
-# Week3Game
+# Hangman
+
+A hangman game built using JavaScript
